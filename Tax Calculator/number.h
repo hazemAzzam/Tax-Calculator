@@ -5,7 +5,7 @@
 using namespace std;
 class number
 {
-	double num;
+	long double num;
 	double inte(double r);
 public:
 	number(double r = 0);
@@ -16,12 +16,12 @@ public:
 	number operator+(double n);
 	number operator*(double n);
 	number operator/(double n);
+	number operator=(double n);
 
 	number operator-(int n);
 	number operator+(int n);
 	number operator*(int n);
 	number operator/(int n);
-	number operator=(double n);
 	number operator=(int n);
 
 	operator double();

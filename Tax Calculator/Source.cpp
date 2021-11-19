@@ -9,7 +9,7 @@ void print(vector<string> data, vector<string> resu);
 int maxStringLength(vector<string> data);
 void printLine(int width);
 string printWhiteSpace(int width);
-string convert(number n);
+string convert(number n); //convert to string
 
 char bounds = '|';
 char inside = '~';
@@ -24,7 +24,8 @@ int main()
 	vector<string> resu;
 
 	while (true) {
-		cout << "\nTotal: "; cin >> totalAmount;
+		
+		cout << "|Total: "; cin >> totalAmount;
 		totalBill = totalAmount * 14 / 100 + totalAmount;
 		number net = totalBill - (totalAmount - 50) * totalAmount.taxsRatio() * 4 - totalAmount * 1 / 100;
 		system("cls");
