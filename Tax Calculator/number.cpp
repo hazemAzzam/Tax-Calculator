@@ -4,7 +4,7 @@
 
 using namespace std;
 
-double number::inte(double r)
+long double number::inte(long double r)
 {
 	string s = to_string(r);
 	string num = "";
@@ -44,24 +44,12 @@ double number::inte(double r)
 			n1 = 0;
 		}
 	}
-	return stod(to_string(n0) + '.' + to_string(n1) + to_string(n2));
+	return stold(to_string(n0) + '.' + to_string(n1) + to_string(n2));
 }
 
 number::number(double r)
 {
 	num = inte(r);
-}
-
-double number::taxsRatio()
-{
-	vector<int> money = {250, 500, 1000, 5000, 10000};
-	vector<double> ratio = { 0.012, 0.013, 0.014, 0.015, 0.016 };
-
-	for (int i = 0; i < money.size(); i++) {
-		if (num <= money[i])
-			return ratio[i];
-	}
-	return 0.017;
 }
 
 number number::operator-(double n)
@@ -116,7 +104,7 @@ number number::operator=(int n)
 	return num;
 }
 
-number::operator double()
+number::operator  double()
 {
 	return num;
 }

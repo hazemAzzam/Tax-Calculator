@@ -6,11 +6,9 @@ using namespace std;
 class number
 {
 	long double num;
-	double inte(double r);
+	long double inte(long double r);
 public:
 	number(double r = 0);
-
-	double taxsRatio();
 
 	number operator-(double n);
 	number operator+(double n);
@@ -29,4 +27,3 @@ public:
 	friend ostream& operator<<(ostream& out, const number& d);
 	friend istream& operator>>(istream& in, number& d);
 };
-
